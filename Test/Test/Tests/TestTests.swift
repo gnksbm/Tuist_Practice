@@ -1,7 +1,7 @@
 import Foundation
 import XCTest
 
-final class TuistPracticeTests: XCTestCase {
+final class TestTests: XCTestCase {
     func test_twoPlusTwo_isFour() {
         XCTAssertEqual(2+2, 4)
     }

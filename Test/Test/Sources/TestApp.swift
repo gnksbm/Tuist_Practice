@@ -1,8 +1,8 @@
 import SwiftUI
-import TuistPracticeUI
+import TestUI
 
 @main
-struct TuistPracticeApp: App {
+struct TestApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

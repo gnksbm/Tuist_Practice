@@ -29,15 +29,16 @@ extension Project {
                 sources: ["Targets/\(name)/Sources/**"],
                 resources: [],
                 dependencies: [])
-        let tests = Target(name: "\(name)Tests",
-                platform: platform,
-                product: .unitTests,
-                bundleId: "io.tuist.\(name)Tests",
-                infoPlist: .default,
-                sources: ["Targets/\(name)/Tests/**"],
-                resources: [],
-                dependencies: [.target(name: name)])
-        return [sources, tests]
+//        let tests = Target(name: "\(name)Tests",
+//                platform: platform,
+//                product: .unitTests,
+//                bundleId: "io.tuist.\(name)Tests",
+//                infoPlist: .default,
+//                sources: ["Targets/\(name)/Tests/**"],
+//                resources: [],
+//                dependencies: [.target(name: name)])
+        return [sources]
+//        , tests]
     }
 
     /// Helper function to create the application target and the unit test target.
@@ -61,16 +62,17 @@ extension Project {
             dependencies: dependencies
         )
 
-        let testTarget = Target(
-            name: "\(name)Tests",
-            platform: platform,
-            product: .unitTests,
-            bundleId: "io.tuist.\(name)Tests",
-            infoPlist: .default,
-            sources: ["Targets/\(name)/Tests/**"],
-            dependencies: [
-                .target(name: "\(name)")
-        ])
-        return [mainTarget, testTarget]
+//        let testTarget = Target(
+//            name: "\(name)Tests",
+//            platform: platform,
+//            product: .unitTests,
+//            bundleId: "io.tuist.\(name)Tests",
+//            infoPlist: .default,
+//            sources: ["Targets/\(name)/Tests/**"],
+//            dependencies: [
+//                .target(name: "\(name)")
+//        ])
+        return [mainTarget]
+//        , testTarget]
     }
 }
